@@ -13,9 +13,10 @@ public class LibroDAO {
     ConexionDB conexionDB;
 
     public LibroDAO() {
+    	
         conexionDB = new ConexionDB();
-    }
 
+    }
     public void anadirLibro(Libro libro) throws SQLException {
         String query = "INSERT INTO libros (libro_titulo, libro_autor, "
                 + "ISBN, fecha_publicacion, editorial, libro_genero, libro_sinopsis)"
@@ -62,18 +63,18 @@ public class LibroDAO {
     	}
     	
     	if(libro.getAutor() != null && !libro.getAutor().isEmpty()) {
-    		query.append("AND libro_autor LIKE ?");
+    		query.append("AND libro_autor LIKE ? ");
     	}
     	
     	if(libro.getISBN() != -1) {
-    		query.append("AND ISBN LIKE ?");
+    		query.append("AND ISBN LIKE ? ");
     	}
     	if(libro.getFechaPublicacion() != null) {
-    		query.append("AND fecha_publicacion LIKE ?");
+    		query.append("AND fecha_publicacion LIKE ? ");
     	}
     	
     	if(libro.getEditorial() != null && !libro.getEditorial().isEmpty()) {
-    		query.append("AND editorial LIKE ?");
+    		query.append("AND editorial LIKE ? ");
     	}
     	
     	if(libro.getGenero() != null && !libro.getGenero().isEmpty()) {
@@ -113,6 +114,7 @@ public class LibroDAO {
     		int numOfRows = statement.executeUpdate();
     		if(numOfRows > 0) {
     			JOptionPane.showMessageDialog(null, "El libro ha sido eliminado");
+    			System.out.println("Libro eliminado");
     		} else {
     			JOptionPane.showMessageDialog(null, "No se encontró el libro en la base de datos");
     		}
@@ -223,4 +225,6 @@ public class LibroDAO {
     	
 	}
     }
+    
+    
 }

@@ -23,7 +23,7 @@ public class AnadirLibroVista extends JPanel {
         gbc.insets = new Insets(10, 10, 10, 10); // Espacio entre componentes
 
         // Estilo del panel
-        setBackground(Color.decode("#f9f9f9")); // Color de fondo suave
+        setBackground(Color.decode("#f9f9f9")); 
 
         // Etiqueta de título
         JLabel anadirLibroLabel = new JLabel("Añadir libro:");

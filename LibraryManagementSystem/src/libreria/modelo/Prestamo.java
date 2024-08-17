@@ -53,59 +53,59 @@ public class Prestamo {
         this.estadoDevuelto = estadoDevuelto;
     }
 
-	public int getIdPrestamo() {
-		return idPrestamo;
-	}
+    public int getIdPrestamo() {
+        return idPrestamo;
+    }
 
-	public void setIdPrestamo(int idPrestamo) {
-		this.idPrestamo = idPrestamo;
-	}
+    public void setIdPrestamo(int idPrestamo) {
+        this.idPrestamo = idPrestamo;
+    }
 
-	public int getUsuarioId() {
-		return usuarioId;
-	}
+    public int getUsuarioId() {
+        return usuarioId;
+    }
 
-	public void setUsuarioId(int usuarioId) {
-		this.usuarioId = usuarioId;
-	}
+    public void setUsuarioId(int usuarioId) {
+        this.usuarioId = usuarioId;
+    }
 
-	public int getLibroId() {
-		return libroId;
-	}
+    public int getLibroId() {
+        return libroId;
+    }
 
-	public void setLibroId(int libroId) {
-		this.libroId = libroId;
-	}
+    public void setLibroId(int libroId) {
+        this.libroId = libroId;
+    }
 
-	public Date getFechaPrestamo() {
-		return fechaPrestamo;
-	}
+    public Date getFechaPrestamo() {
+        return fechaPrestamo;
+    }
 
-	public void setFechaPrestamo(Date fechaPrestamo) {
-		this.fechaPrestamo = fechaPrestamo;
-	}
+    public void setFechaPrestamo(Date fechaPrestamo) {
+        this.fechaPrestamo = fechaPrestamo;
+    }
 
-	public Date getFechaDevolucion() {
-		return fechaDevolucion;
-	}
+    public Date getFechaDevolucion() {
+        return fechaDevolucion;
+    }
 
-	public void setFechaDevolucion(Date fechaDevolucion) {
-		this.fechaDevolucion = fechaDevolucion;
-	}
+    public void setFechaDevolucion(Date fechaDevolucion) {
+        this.fechaDevolucion = fechaDevolucion;
+    }
 
-	public boolean isEstadoDevuelto() {
-		return estadoDevuelto;
-	}
+    public boolean isEstadoDevuelto() {
+        return estadoDevuelto;
+    }
 
-	public void setEstadoDevuelto(boolean estadoDevuelto) {
-		this.estadoDevuelto = estadoDevuelto;
-	}
+    public void setEstadoDevuelto(boolean estadoDevuelto) {
+        this.estadoDevuelto = estadoDevuelto;
+    }
 
-	@Override
-	public String toString() {
-		return "Prestamo [idPrestamo=" + idPrestamo + ", usuarioId=" + usuarioId + ", libroId=" + libroId
-				+ ", fechaPrestamo=" + fechaPrestamo + ", fechaDevolucion=" + fechaDevolucion + ", estadoDevuelto="
-				+ estadoDevuelto + "]";
-	}
-
+    @Override
+    public String toString() {
+        return "Prestamo [idPrestamo=" + idPrestamo + ", usuarioId=" + usuarioId + ", libroId=" + libroId
+                + ", fechaPrestamo=" + fechaPrestamo + ", fechaDevolucion=" + fechaDevolucion + ", estadoDevuelto="
+                + estadoDevuelto + "]";
+    }
 }
+ 

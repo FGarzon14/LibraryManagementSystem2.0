@@ -7,7 +7,7 @@ public class Usuario {
 	private int id;
 	private String nombre;
 	private String contrasena;
-	private Date fechaNacimiento;
+	private java.util.Date fechaNacimiento;
 	private String correo;
 	private int tipo;
 
@@ -22,7 +22,7 @@ public class Usuario {
     }
 
     // Constructor sin id (para nuevos usuarios)
-    public Usuario(String nombre, String password, Date fechaNacimiento, String correo, int tipo) {
+    public Usuario(String nombre, String password, java.util.Date fechaNacimiento, String correo, int tipo) {
         this.nombre = nombre;
         this.contrasena = password;
         this.fechaNacimiento = fechaNacimiento;
@@ -43,6 +43,12 @@ public class Usuario {
         this.nombre = nombre;
         this.contrasena = password;
         this.tipo = tipo;
+    }
+    
+    public Usuario(int ID, String nombre) {
+        this.id = ID;
+    	this.nombre = nombre;
+        
     }
     
 	public int getId() {
@@ -69,7 +75,7 @@ public class Usuario {
 		this.contrasena = contrasena;
 	}
 
-	public Date getFechaNacimiento() {
+	public java.util.Date getFechaNacimiento() {
 		return fechaNacimiento;
 	}
 

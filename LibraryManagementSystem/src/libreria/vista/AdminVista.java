@@ -3,6 +3,8 @@ package libreria.vista;
 import javax.swing.*;
 
 import libreria.controlador.LibroController;
+import libreria.controlador.PrestamoController;
+import libreria.controlador.UsuarioController;
 
 import java.awt.*;
 
@@ -79,13 +81,25 @@ public class AdminVista extends JFrame {
         // Crear instancias de las vistas y añadirlas al CardLayout con claves únicas
         AnadirLibroVista anadirLibroVista = new AnadirLibroVista();
         EliminarLibroVista eliminarLibroVista = new EliminarLibroVista();
-
+        AnadirUsuarioVista anadirUsuarioVista = new AnadirUsuarioVista();
+        EliminarUsuarioVista eliminarUsuarioVista = new EliminarUsuarioVista();
+        PrestamoVista prestamoVista = new PrestamoVista();
+        
         mainPanel.add(anadirLibroVista, "AnadirLibroVista");
         mainPanel.add(eliminarLibroVista, "EliminarLibroVista");
+        mainPanel.add(anadirUsuarioVista, "AnadirUsuarioVista");
+        mainPanel.add(eliminarUsuarioVista, "EliminarUsuarioVista"); 
+        mainPanel.add(prestamoVista, "PrestamoVista");
+        
 
         // Inicializar controladores
         new LibroController(anadirLibroVista);
         new LibroController(eliminarLibroVista);
+        new UsuarioController(anadirUsuarioVista);
+        new UsuarioController(eliminarUsuarioVista);
+        new PrestamoController(prestamoVista);
+        
+        
 
         // Configurar acciones de los botones para mostrar las vistas correspondientes
         anadirLibroBtn.addActionListener(e -> {
@@ -96,6 +110,20 @@ public class AdminVista extends JFrame {
         eliminarLibroBtn.addActionListener(e -> {
             System.out.println("Eliminar libro botón clicado");
             cardLayout.show(mainPanel, "EliminarLibroVista");
+        });
+        
+        anadirUsuarioBtn.addActionListener(e -> {
+        	System.out.println("Añadir usuario botón clicado");
+        	cardLayout.show(mainPanel, "AnadirUsuarioVista");
+        });
+        
+        eliminarUsuarioBtn.addActionListener(e -> {
+        	System.out.println("Eliminar usuario botón clicado");
+        	cardLayout.show(mainPanel, "EliminarUsuarioVista");
+        });
+        prestarLibroBtn.addActionListener(e -> {
+        	System.out.println("Prestar libro botón clicado");
+        	cardLayout.show(mainPanel, "PrestamoVista");
         });
 
         setVisible(true);

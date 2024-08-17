@@ -10,6 +10,7 @@ import javax.swing.JOptionPane;
 import libreria.modelo.Libro;
 import libreria.modelo.LibroDAO;
 import libreria.vista.AnadirLibroVista;
+import libreria.vista.AnadirUsuarioVista;
 import libreria.vista.EliminarLibroVista;
 
 public class LibroController {
@@ -154,6 +155,8 @@ public class LibroController {
         	
         }
     }
+    
+
 
 }
 
